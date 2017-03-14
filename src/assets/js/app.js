@@ -11,7 +11,7 @@ $.ajax({
           var imageText = response.data[i].caption.text;
           // console.log( "regular: ", image );
           // console.log( "resized: ",imageLarge );
-          $('#instafeed').append('<div class="small-6 medium-3 columns instagramPhoto"><a href="'+imageURL+'" target="_blank"><img src="'+imageLarge+'" alt="'+imageText+'" /></a></div>');
+          $('#instafeed').append('<div class="small-6 medium-3 columns instagramPhoto"><a href="'+imageURL+'" target="_blank" rel="noopener"><img src="'+imageLarge+'" alt="'+imageText+'" /></a></div>');
         }
     }
 });
