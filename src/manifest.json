@@ -1,0 +1,21 @@
+{
+  "name": "Woodbeard",
+  "short_name": "Woodbeard",
+  "theme_color": "#191919",
+  "background_color": "#191919",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": {
+    "16": "/assets/img/icons/favicon-16x16.png",
+    "57": "/assets/img/icons/apple-touch-icon-57x57.png",
+    "60": "/assets/img/icons/apple-touch-icon-60x60.png",
+    "72": "/assets/img/icons/apple-touch-icon-72x72.png",
+    "76": "/assets/img/icons/apple-touch-icon-76x76.png",
+    "114": "/assets/img/icons/apple-touch-icon-114x114.png",
+    "120": "/assets/img/icons/apple-touch-icon-120x120.png",
+    "144": "/assets/img/icons/apple-touch-icon-144x144.png",
+    "152": "/assets/img/icons/apple-touch-icon-152x152.png"
+  }
+}

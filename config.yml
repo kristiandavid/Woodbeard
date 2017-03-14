@@ -60,3 +60,8 @@ PATHS:
     # Paths to your own project code are here
     - "src/assets/js/!(app).js"
     - "src/assets/js/app.js"
+  #paths to json files for PWAs
+  pwa:
+    - "src/**/*.json"
+    - "src/**/sitemap.xml"
+    - "src/**/sw.js"
