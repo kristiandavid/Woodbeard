@@ -1,18 +1,99 @@
-html{
-  // background: url(../img/bg.jpg) no-repeat;
-  // background-size: cover;
+// Variables
+$stevie: rgb(19,19,19);
+$kronner: rgb(55,55,55);
+$ice: #ccc;
+$wings: rgb(229, 24, 55);
+
+
+*{
+  font-family: 'Quicksand', sans-serif;
 }
+
+a{
+  color:$ice;
+  transition: all .2s ease-in-out;
+  &:hover{
+    color:$wings;
+  }
+}
+
+h1,h2,h3,h4,h5{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: normal;
+  margin: 0;
+}
+
+h1{
+  margin-bottom: rem-calc(-10);
+  float:none;
+  transition: all .2s ease-in-out;
+  @include breakpoint(small down) {
+    margin-bottom: 0;
+    float:right;
+  }
+}
+
 
 body{
-  background: rgab(255,255,255,.2);
+  background: $stevie;
   height:100%;
+  color:$ice;
+  border-top:1px solid $wings;
 }
 
 
-.instagramPhoto{
-  // padding-bottom: 25%;
-  // position: relative;
-  // max-height: 20vh;
-  // overflow: hidden;
-  // border: 1px solid red; /* !test */
+header{
+  padding:rem-calc(20) 0;
+  @include breakpoint(small down) {
+    padding:rem-calc(20) 0 0;
+  }
+  .menu{
+    margin-top: rem-calc(20);
+    a{
+      border-top:1px solid $ice;
+      border-bottom:1px solid $ice;
+    }
+  }
+  a{
+    display: block;
+  }
+  svg{
+    max-width:rem-calc(300);
+    margin: 0 auto;
+    display: block;
+    float:none;
+    transition: all .2s ease-in-out;
+    @include breakpoint(small down) {
+      float:left;
+      max-width:20%
+    }
+    path, rect{
+      fill:$ice;
+    }
+  }
+}
+
+.menu-centered{
+  @include breakpoint(small down) {
+    text-align: right;
+  }
+}
+
+
+.homeContact{
+  margin-top: rem-calc(40);
+}
+
+
+footer{
+  margin-top: rem-calc(20);
+  border-top:1px solid $wings;
+  p{
+    padding: 0.7rem;
+  }
+  @include breakpoint(small down) {
+    .columns{
+      text-align: right;
+    }
+  }
 }
