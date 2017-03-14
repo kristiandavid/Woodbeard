@@ -18,34 +18,34 @@ self.addEventListener("install", function(event) {
 
 
 // Serving from Cache First
-// self.addEventListener("fetch", function(event) {
-//   event.respondWith(caches.match(event.request) //do you have this request in the cache?
-//     .then(function(response) {
-//       if (response) {
-//         // The request is in the cache
-//         return response;
-//       } else {
-//         // We need to go to the network
-//         return fetch(event.request);
-//       }
-//     })
-//   )
-// });
+self.addEventListener("fetch", function(event) {
+  event.respondWith(caches.match(event.request) //do you have this request in the cache?
+    .then(function(response) {
+      if (response) {
+        // The request is in the cache
+        return response;
+      } else {
+        // We need to go to the network
+        return fetch(event.request);
+      }
+    })
+  )
+});
 
 // Serving from Cache and Update resources
-self.addEventListener("fetch", function(event) {
-  event.respondWith(
-    caches.match(event.request)
-      .then(function(response) {
-        // Even if the response is in the cache, we fetch it
-        // and update the cache for future usage
-        var fetchPromise = fetch(event.request).then(
-          function(networkResponse) {
-            caches.put(event.request, networkResponse.clone());
-            return networkResponse;
-          });
-          // We use the currently cached version if it's there
-          return response || fetchPromise;
-        })
-  );
-});
+// self.addEventListener("fetch", function(event) {
+//   event.respondWith(
+//     caches.match(event.request)
+//       .then(function(response) {
+//         // Even if the response is in the cache, we fetch it
+//         // and update the cache for future usage
+//         var fetchPromise = fetch(event.request).then(
+//           function(networkResponse) {
+//             caches.put(event.request, networkResponse.clone());
+//             return networkResponse;
+//           });
+//           // We use the currently cached version if it's there
+//           return response || fetchPromise;
+//         })
+//   );
+// });
